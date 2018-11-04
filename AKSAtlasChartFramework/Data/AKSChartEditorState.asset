@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f5cf5ce1b19fa3448ff4d3a7578ac02, type: 3}
+  m_Name: AKSChartEditorState
+  m_EditorClassIdentifier: 
+  chart: {fileID: 0}
+  palette: {fileID: 11400000, guid: 8e79392013eaad94f87b983ed2f6538d, type: 2}
+  scale: 24
+  showGrids: 1
+  snapSetting: 0
+  panelChartFoldout: 1
+  panelEditorOptionsFoldout: 1
+  panelMarkerOptionsFoldout: 0

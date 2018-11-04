@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c9ea901c5e657844af889f0f5e09cf7, type: 3}
+  m_Name: Default Tag Table
+  m_EditorClassIdentifier: 
+  defaultDrawer: {fileID: 11400000, guid: 8938e7feefbf54242a967140c7c08db9, type: 2}
+  drawers:
+    keys:
+    - Entrance
+    - Exit
+    values:
+    - {fileID: 11400000, guid: 211d8c733d4a8e849bfaf07bb45e0a61, type: 2}
+    - {fileID: 11400000, guid: 7a9aff46980fd94419f61329814e02da, type: 2}
