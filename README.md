@@ -2,7 +2,7 @@
 
 This is a Unity framework I'm experimenting with for a type of procedural generation commonly found in ARPGs (Action Role Playing Games), such as Diablo 2 and Path of Exile. It is based on the abstract notions of charts, which map out a local section of a level; atlases, which are a complete collection of charts; and markers, which represent content in a chart. A concrete example of this is the room and maze style of maps found in Diablo 2. A simple maze algorithm generates a number of connected cells, and hand-crafted rooms are slotted into those cells to flesh out the entire level. 
 
-The heart of this framework is a set of editor tools for building these charts. It is usable in its current state but there are still some features I wish to flesh out, and adding a few sample projects will be useful in helping to understand how to put everything together. In the meantime, I've put together an overview to illustrate what the project is about. 
+The heart of this framework is a set of editor tools for building these charts. 
 
 ## Overview
 
@@ -22,22 +22,14 @@ Note that there is a tradeoff between placing markers by hand, versus writing al
 
 ![Chart Editor](https://i.imgur.com/ITpXIsR.png)
 
-The next step is to assemble these chunks to form a complete level. In principle, there are many ways to do this. An implementation I've provided is the previously mentioned maze and room style. You can write your own maze algorithm and plug it in, but here's a fairly flexible maze generator I've provided (each cell in the maze corresponds to one chunk):
+The next step is to assemble these chunks to form a complete level. In principle, there are many ways to do this. An implementation I've provided is the previously mentioned maze and room style. You can write your own maze algorithm and plug it in, but here's a fairly flexible (albeit unintuitive) maze generator I've provided (each cell in the maze corresponds to one chunk):
 
 ![Maze Generator](https://i.imgur.com/kkBeFiA.png)
 
 At this point we have a complete abstract level generator (it's abstract since we still just have markers and white/black tiles, not actual content), so we need a presentation layer to interpret everything. I'm working on providing better tools for this part, but in the following example I've simply created a component that associates marker presets to a list of prefabs to be chosen and instantiated at random at the marker's location (e.g. minor encounter -> fallen, gargantuan beast, or zombie, and major encounter -> fallen shaman + 5 fallen, 3 gargantuan beasts, or 4 zombies, etc.). A more flexible approach would be to associate presets to "factories", which I will likely implement (and explain more clearly) in the future. 
 
-That handles the markers. For the level itself, I've used my Procedural Cave Generator project to build this level. 
+That handles the markers. For the level itself, I've used my Procedural Cave Generator project to translate the charts into actual meshes.
 
 ![Final Result](https://i.imgur.com/gSYQn0n.png)
 
 ![Final Result Close-up](https://i.imgur.com/MS9xWET.png)
-
-## An integrated example
-
-See my Unity Roguelike repo for a more complete example of a game making use of this framework. It uses a completely different presentation (as it is a 2D tile-based game) and also integrates the map generation with the rest of the systems. Note that the version of the framework in this repo will always be the most up to date one.
-
-![Roguelike example](https://i.imgur.com/PTK31iB.png)
-
-A more complete readme will be written in the (most likely near) future.
